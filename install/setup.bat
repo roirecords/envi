@@ -8,3 +8,5 @@ ECHO Installing pyModbusTCP.
 pip install pyModbusTCP
 ECHO Installing PyQt5.
 pip install PyQt5
+ECHO Installation completed.
+pause

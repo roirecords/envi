@@ -80,7 +80,7 @@ class Ui_Form(object):
         #Updating the GUI
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.update)
-        self.timer.start(100) #trigger every second.
+        self.timer.start(2000) #trigger every second.
 
 
 

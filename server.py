@@ -1,6 +1,6 @@
 from pyModbusTCP.server import ModbusServer
-
-c = ModbusServer(host='localhost', port=60000, no_block=False, ipv6=False)
+a = input('Server IP: ')
+c = ModbusServer(host= a , port=60000, no_block=False, ipv6=False)
 print("Creating ModbusServer")
 print("Establishing host")
 print("Establishing port and connecting")
