@@ -53,6 +53,7 @@ class Ui_Form(object):
         font.setPointSize(28)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
+        self.serverip = ""
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -76,13 +77,24 @@ class Ui_Form(object):
         self.ip_btn.clicked.connect(self.connectServer)
         self.measure_s1_btn.clicked.connect(self.measureS1)
         self.done_s1_btn.clicked.connect(self.doneS1)
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.update)
+        self.timer.start(100) #trigger every second.
+
+
+    def update(self):
+        c.host(self.serverip)
+        c.open()
+        if c.is_open() == 1:
+            c.write_single_register(9,1)
 
 
     def connectServer(self):
 
         print("Connecting Server!")
         print(self.ip_txt.text())
-        c.host(self.ip_txt.text())
+        self.serverip = self.ip_txt.text()
+        c.host(self.serverip)
         c.open()
         if c.is_open() == 1:
             print("Connected")
