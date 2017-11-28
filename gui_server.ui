@@ -7,21 +7,31 @@
     <x>0</x>
     <y>0</y>
     <width>837</width>
-    <height>559</height>
+    <height>706</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background{color:black}</string>
+   <string notr="true">QGroupBox {
+    border: 1.5px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}</string>
   </property>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>10</y>
-     <width>201</width>
+     <x>160</x>
+     <y>150</y>
+     <width>541</width>
      <height>61</height>
     </rect>
    </property>
@@ -31,14 +41,17 @@
     </font>
    </property>
    <property name="text">
-    <string>Cookie GUI</string>
+    <string>EnviGuard Port Controller</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>170</y>
+     <x>200</x>
+     <y>310</y>
      <width>451</width>
      <height>361</height>
     </rect>
@@ -385,11 +398,16 @@
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>80</y>
+     <x>200</x>
+     <y>220</y>
      <width>451</width>
      <height>81</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <underline>false</underline>
+    </font>
    </property>
    <property name="title">
     <string>Server</string>
@@ -430,7 +448,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>127.0.000.198</string>
+     <string>192.168.1.38</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -446,6 +464,44 @@
      <string>Server IP</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>20</y>
+     <width>301</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Logo_CEI.JPG</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>20</y>
+     <width>301</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Enviguard_LOGO.PNG</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -13,16 +13,27 @@ import sys
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(837, 559)
-        Form.setStyleSheet("background{color:black}")
+        Form.resize(837, 706)
+        Form.setStyleSheet("QGroupBox {\n"
+"    border: 1.5px solid gray;\n"
+"    border-radius: 9px;\n"
+"    margin-top: 0.5em;\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    left: 10px;\n"
+"    padding: 0 3px 0 3px;\n"
+"}")
         self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(320, 10, 201, 61))
+        self.label_2.setGeometry(QtCore.QRect(160, 150, 541, 61))
         font = QtGui.QFont()
         font.setPointSize(28)
         self.label_2.setFont(font)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.groupBox_2 = QtWidgets.QGroupBox(Form)
-        self.groupBox_2.setGeometry(QtCore.QRect(190, 170, 451, 361))
+        self.groupBox_2.setGeometry(QtCore.QRect(200, 310, 451, 361))
         self.groupBox_2.setObjectName("groupBox_2")
         self.connect_cookie = QtWidgets.QLabel(self.groupBox_2)
         self.connect_cookie.setGeometry(QtCore.QRect(80, 20, 91, 20))
@@ -106,7 +117,10 @@ class Ui_Form(object):
         self.reset_s3_btn.setGeometry(QtCore.QRect(200, 20, 51, 28))
         self.reset_s3_btn.setObjectName("reset_s3_btn")
         self.groupBox_3 = QtWidgets.QGroupBox(Form)
-        self.groupBox_3.setGeometry(QtCore.QRect(190, 80, 451, 81))
+        self.groupBox_3.setGeometry(QtCore.QRect(200, 220, 451, 81))
+        font = QtGui.QFont()
+        font.setUnderline(False)
+        self.groupBox_3.setFont(font)
         self.groupBox_3.setObjectName("groupBox_3")
         self.connect_server = QtWidgets.QLabel(self.groupBox_3)
         self.connect_server.setGeometry(QtCore.QRect(320, 30, 111, 21))
@@ -120,19 +134,30 @@ class Ui_Form(object):
         self.label = QtWidgets.QLabel(self.groupBox_3)
         self.label.setGeometry(QtCore.QRect(20, 30, 61, 21))
         self.label.setObjectName("label")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(90, 20, 301, 111))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("Logo_CEI.JPG"))
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(Form)
+        self.label_4.setGeometry(QtCore.QRect(410, 20, 301, 111))
+        self.label_4.setText("")
+        self.label_4.setPixmap(QtGui.QPixmap("Enviguard_LOGO.PNG"))
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
         self.regs_old = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         self.serverip=""
-
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label_2.setText(_translate("Form", "Cookie GUI"))
+        Form.setWindowTitle(_translate("Form", "EnviGuard Port Controller"))
+        self.label_2.setText(_translate("Form", "EnviGuard Port Controller"))
         self.groupBox_2.setTitle(_translate("Form", "Cookie"))
-        self.connect_cookie.setText(_translate("Form", "Not Connected"))
+        self.connect_cookie.setText(_translate("Form", "Connecting"))
         self.groupBox.setTitle(_translate("Form", "CDU"))
         self.measure_s1_btn.setText(_translate("Form", "Measuring"))
         self.done_s1_btn.setText(_translate("Form", "Stop"))
@@ -156,9 +181,9 @@ class Ui_Form(object):
         self.state_s3_lbl.setText(_translate("Form", "OK"))
         self.reset_s3_btn.setText(_translate("Form", "Reset"))
         self.groupBox_3.setTitle(_translate("Form", "Server"))
-        self.connect_server.setText(_translate("Form", "Server Not Connected"))
+        self.connect_server.setText(_translate("Form", "Connecting"))
         self.ip_btn.setText(_translate("Form", "Update IP"))
-        self.ip_txt.setText(_translate("Form", "127.0.000.198"))
+        self.ip_txt.setText(_translate("Form", "192.168.1.38"))
         self.label.setText(_translate("Form", "Server IP"))
 
         self.ip_btn.clicked.connect(self.connectServer)
@@ -167,7 +192,7 @@ class Ui_Form(object):
         #Updating the GUI
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.update)
-        self.timer.start(5000) #trigger every second.
+        self.timer.start(5000) #trigger 5 seconds.
 
 
     def update(self):
@@ -307,4 +332,6 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
+
+
 
