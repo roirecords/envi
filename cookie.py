@@ -9,6 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pyModbusTCP.client import ModbusClient
 import sys
+import socket
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -147,6 +148,8 @@ class Ui_Form(object):
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.regs_old = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        self.mask1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.mask2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.serverip=""
 
         self.retranslateUi(Form)
@@ -207,40 +210,122 @@ class Ui_Form(object):
                 for i in range(0, 10):
                     if self.regs_old[i] != regs[i]:
                         self.regs_old[i]= regs[i]
+                        self.mask1[i]=self.regs_old[i]//10
+                        self.mask2[i]=self.regs_old[i]%10
                         
                         if i == 0:
-                            if self.regs_old[i] == 0:
+                            
+                            if self.mask2[i] == 0:
                                 self.measure_s1_lbl.setText("Idle")
                                 
-                            elif self.regs_old[i] == 1:
+                            elif self.mask2[i] == 1:
                                 self.measure_s1_lbl.setText("Connecting")
                                 
-                            elif self.regs_old[i] == 2:
+                            elif self.mask2[i] == 2:
                                 self.measure_s1_lbl.setText("Measuring")
 
-                            elif self.regs_old[i] == 3:
+                            elif self.mask2[i] == 3:
                                 self.measure_s1_lbl.setText("Measured")
-                                c.write_single_register(i,0)
+                                self.mask2[i]=0
+                                writemask=self.mask1[i]*10+self.mask2[i]
+                                c.write_single_register(i,writemask)
 
-                            elif self.regs_old[i] == 7:
+                            elif self.mask2[i] == 7:
                                 self.measure_s1_lbl.setText("No Water")
                                 self.done_s1_btn.setEnabled(True)
-                            
-                        elif i == 1:
-                            if self.regs_old[i] == 0:
+
+                            if self.mask1[i] == 0:
                                 self.done_s1_lbl.setText("Idle")
                                 
-                            elif self.regs_old[i] == 1:
+                            elif self.mask1[i] == 1:
+                                self.done_s1_lbl.setText("Connecting")
+
+                            elif self.mask1[i] == 2:
                                 self.done_s1_lbl.setText("Stopping")
                                 
-                            elif self.regs_old[i] == 2:
+                            elif self.mask1[i] == 3:
                                 self.done_s1_lbl.setText("Stopped")
-                                c.write_single_register(i,0)
+                                self.mask1[i]=0
+                                writemask=self.mask1[i]*10+self.mask2[i]
+                                c.write_single_register(i,writemask)
+                            elif self.mask1[i] == 7:
+                                self.done_s1_lbl.setText("Can't Stop")
+                            
+                        elif i == 1:
+                            if self.mask2[i] == 0:
+                                self.measure_s2_lbl.setText("Idle")
+                                
+                            elif self.mask2[i] == 1:
+                                self.measure_s2_lbl.setText("Connecting")
+                                
+                            elif self.mask2[i] == 2:
+                                self.measure_s2_lbl.setText("Measuring")
+
+                            elif self.mask2[i] == 3:
+                                self.measure_s2_lbl.setText("Measured")
+                                self.mask2[i]=0
+                                writemask=self.mask1[i]*10+self.mask2[i]
+                                c.write_single_register(i,writemask)
+
+                            elif self.mask2[i] == 7:
+                                self.measure_s2_lbl.setText("No Water")
+                                self.done_s1_btn.setEnabled(True)
+
+                            if self.mask1[i] == 0:
+                                self.done_s2_lbl.setText("Idle")
+                                
+                            elif self.mask1[i] == 1:
+                                self.done_s2_lbl.setText("Connecting")
+
+                            elif self.mask1[i] == 2:
+                                self.done_s2_lbl.setText("Stopping")
+                                
+                            elif self.mask1[i] == 3:
+                                self.done_s2_lbl.setText("Stopped")
+                                self.mask1[i]=0
+                                writemask=self.mask1[i]*10+self.mask2[i]
+                                c.write_single_register(i,writemask)
+                            elif self.mask1[i] == 7:
+                                self.done_s2_lbl.setText("Can't Stop")
                             
                         elif i == 2:
-                            if self.regs_old[i] == 2:
-                                self.done_s1_lbl.setText("Completed! "+str(regs[i]))
-                                c.write_single_register(i,0)
+                            if self.mask2[i] == 0:
+                                self.measure_s3_lbl.setText("Idle")
+                                
+                            elif self.mask2[i] == 1:
+                                self.measure_s3_lbl.setText("Connecting")
+                                
+                            elif self.mask2[i] == 2:
+                                self.measure_s3_lbl.setText("Measuring")
+
+                            elif self.mask2[i] == 3:
+                                self.measure_s3_lbl.setText("Measured")
+                                self.mask2[i]=0
+                                writemask=mask1*10+self.mask2[i]
+                                c.write_single_register(i,writemask)
+
+                            elif self.mask2[i] == 7:
+                                self.measure_s3_lbl.setText("No Water")
+                                self.done_s1_btn.setEnabled(True)
+
+                            if self.mask1[i] == 0:
+                                self.done_s3_lbl.setText("Idle")
+                                
+                            elif self.mask1[i] == 1:
+                                self.done_s3_lbl.setText("Connecting")
+
+                            elif self.mask1[i] == 2:
+                                self.done_s3_lbl.setText("Stopping")
+                                
+                            elif self.mask1[i] == 3:
+                                self.done_s3_lbl.setText("Stopped")
+                                self.mask1[i]=0
+                                writemask=self.mask1[i]*10+self.mask2[i]
+                                c.write_single_register(i,writemask)
+                            elif self.mask1[i] == 7:
+                                self.done_s3_lbl.setText("Can't Stop")
+
+                            
 
                         elif i == 9:
                             if self.regs_old[i] == 1:
@@ -248,6 +333,7 @@ class Ui_Form(object):
                                 c.write_single_register(i,0)
                             else:
                                 self.connect_cookie.setText("Not Connected")
+
 
 
 
@@ -287,7 +373,10 @@ class Ui_Form(object):
         self.measure_s1_lbl.setText("Measuring!!")
         c.open()
         if c.is_open() == 1:
-            if c.write_single_register(0,1):
+            self.mask2[0]=1
+            writemask=self.mask1[0]*10+self.mask2[0]
+            print(writemask)
+            if c.write_single_register(0,writemask):
                 regs = c.read_holding_registers(0, 10)
             if regs:
                 print("reg ad #0 to 9: "+str(regs))
@@ -305,7 +394,10 @@ class Ui_Form(object):
         regs = c.read_holding_registers(0, 10)
         if c.is_open() == 1:
             self.done_s1_lbl.setText("Stopping!")
-            if c.write_single_register(1,1):
+            self.mask1[0]=1
+            writemask=self.mask1[0]*10+self.mask2[0]
+            print(writemask)
+            if c.write_single_register(0,writemask):
                 regs = c.read_holding_registers(0, 10)
             if regs:
                 print("reg ad #0 to 9: "+str(regs))
@@ -321,7 +413,8 @@ class Ui_Form(object):
 if __name__ == "__main__":
     c = ModbusClient()
     print("Creating ModbusClient")
-    c.host("localhost")
+    socket.gethostname()
+    c.host(socket.gethostname())
     print("Establishing host")
     c.port(60000)
     print("Establishing port")
@@ -332,6 +425,5 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
-
 
 

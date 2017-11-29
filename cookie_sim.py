@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui_client.ui'
+# Form implementation generated from reading ui file 'gui_server.ui'
 #
 # Created by: PyQt5 UI code generator 5.9
 #
@@ -9,7 +9,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pyModbusTCP.client import ModbusClient
 import sys
-import socket
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -54,17 +53,18 @@ class Ui_Form(object):
         font.setPointSize(28)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
+        self.regs_old = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         self.mask1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.mask2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        self.serverip = "localhost"
-
+        self.serverip=""
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
+
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.ip_txt.setText(_translate("Form", "127.0.000.198"))
+        self.ip_txt.setText(_translate("Form", "localhost"))
         self.label.setText(_translate("Form", "IP"))
         self.groupBox.setTitle(_translate("Form", "Sensor 1"))
         self.measure_s1_btn.setText(_translate("Form", "Measuring"))
@@ -75,27 +75,43 @@ class Ui_Form(object):
         self.done_s1_lbl_2.setText(_translate("Form", "Not measuring"))
         self.connect_s1_lbl.setText(_translate("Form", "Not measuring"))
         self.ip_btn.setText(_translate("Form", "Update IP"))
-        self.label_2.setText(_translate("Form", "CLIENT"))
+        self.label_2.setText(_translate("Form", "SERVER"))
 
         self.ip_btn.clicked.connect(self.connectServer)
         self.measure_s1_btn.clicked.connect(self.measureS1)
         self.done_s1_btn.clicked.connect(self.doneS1)
-        self.update()
-        
+        #Updating the GUI
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.update)
+        self.timer.start(2000) #trigger every second.
+
 
 
     def update(self):
-        
+        print("Updating!")
         c.host(self.serverip)
         c.open()
         if c.is_open() == 1:
-            print('Connected')
+            print("Connected")
+            self.connect_s1_lbl.setText("Connected")
             regs = c.read_holding_registers(0, 10)
-            self.regs_old[i]= regs[i]
-            self.mask1[i]=self.regs_old[i]//10
-            self.mask2[i]=self.regs_old[i]%10
-            c.write_single_register(9,1)
 
+            for i in range(0, 9):
+                if self.regs_old[i] != regs[i]:
+                    self.regs_old[i]= regs[i]
+                    self.regs_old[i]= regs[i]
+                    self.mask1[i]=self.regs_old[i]//10
+                    self.mask2[i]=self.regs_old[i]%10
+
+
+            if regs:
+                print("reg ad #0 to 9: "+str(regs))
+            else:
+                print("Not Connected")
+            c.close()
+        else:
+            self.connect_s1_lbl.setText("Not Connected")
+            print("Not Connected")
 
     def connectServer(self):
 
@@ -106,67 +122,64 @@ class Ui_Form(object):
         c.open()
         if c.is_open() == 1:
             print("Connected")
-            regs = c.read_holding_registers(0, 10)
             self.connect_s1_lbl.setText("Connected")
+            regs = c.read_holding_registers(0, 10)
+
             if regs:
                 print("reg ad #0 to 9: "+str(regs))
             else:
                 print("Not Connected")
             c.close()
         else:
+            self.connect_s1_lbl.setText("Not Connected")
             print("Not Connected")
 
-
+            
     def measureS1(self):
         print("Measuring!")
-        self.measure_s1_lbl.setText("Connecting!!")
+        self.measure_s1_lbl.setText("Measuring!!")
         c.open()
         if c.is_open() == 1:
-            regs = c.read_holding_registers(0, 10)
+            self.mask2[0]=2
+            writemask=self.mask1[0]*10+self.mask2[0]
+            self.measure_s1_lbl.setText("Measuring!!")
+            self.connect_s1_lbl.setText("Connected")
+            if c.write_single_register(0,writemask):
+                regs = c.read_holding_registers(0, writemask)
             if regs:
                 print("reg ad #0 to 9: "+str(regs))
-
-                if self.mask2[0] ==1:
-                    self.measure_s1_lbl.setText("Measured!")
-                    self.mask2[0]=2
-                    writemask=self.mask1[0]*10+self.mask2[0]
-                    print(writemask)
-                    c.write_single_register(0,writemask)
-                else:
-                    print("Not Connected")
+            else:
+                print("Not Connected")
             c.close()
         else:
-            print("Not Connected")
-
-        
+            self.connect_s1_lbl.setText("Not Connected")
+            print("Not Connected")        
         
 
     def doneS1(self):
-        print("Almost Done!")
-        self.done_s1_lbl.setText("Almost!!")
+        self.done_s1_lbl.setText("Connecting!!")
         c.open()
         regs = c.read_holding_registers(0, 10)
         if c.is_open() == 1:
+            self.mask1[0]=2
+            writemask=self.mask1[0]*10+self.mask2[0]
+            self.done_s1_lbl.setText("Stopping!")
+            self.connect_s1_lbl.setText("Connected")
+            if c.write_single_register(0,writemask):
+                regs = c.read_holding_registers(0, 10)
             if regs:
                 print("reg ad #0 to 9: "+str(regs))
-                if self.mask1[0] ==1:
-                    self.done_s1_lbl.setText("Stopped")
-                    self.mask1[0]=2
-                    writemask=self.mask1[0]*10+self.mask2[0]
-                    print(writemask)
-                    c.write_single_register(0,writemask)
-                else:
-                    print("Not Connected")
+            else:
+                print("Not Connected")
             c.close()
         else:
-            print("Not Connected")
+            print("Not Connected")        
           
 
     def printnum(self):
         print("Ham!")
 
 if __name__ == "__main__":
-    
     c = ModbusClient()
     print("Creating ModbusClient")
     c.host("localhost")
