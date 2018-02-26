@@ -315,7 +315,7 @@ class Ui_Form(object):
                         c.write_single_register(i,writemask)
 
                     elif self.mask2[i] == 7:
-                        self.state_s1_lbl.setText("Connection error")
+                        self.error_s1_lbl.setText("error 7")
                         self.mask1[i]=1
                         writemask=self.mask1[i]*10+self.mask2[i]
                         print(writemask)
@@ -353,7 +353,7 @@ class Ui_Form(object):
                         self.measure_s2_lbl.setText("Idle")
                         
                     elif self.mask2[i] == 1:
-                        self.state_s2_lbl.setText("CDU Not Connected")
+                        self.error_s2_lbl.setText("CDU Not Connected")
                         
                     elif self.mask2[i] == 2:
                         self.measure_s2_lbl.setText("Measuring")
@@ -365,7 +365,7 @@ class Ui_Form(object):
                         c.write_single_register(i,writemask)
 
                     elif self.mask2[i] == 7:
-                        self.state_s2_lbl.setText("No Water")
+                        self.error_s2_lbl.setText("No Water")
                         self.done_s1_btn.setEnabled(True)
 
                     if self.mask1[i] == 0:
