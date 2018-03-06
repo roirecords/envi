@@ -14,7 +14,7 @@ import socket
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(837, 706)
+        Form.resize(837, 746)
         Form.setStyleSheet("QGroupBox {\n"
 "    border: 1.5px solid gray;\n"
 "    border-radius: 9px;\n"
@@ -34,149 +34,185 @@ class Ui_Form(object):
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.groupBox_2 = QtWidgets.QGroupBox(Form)
-        self.groupBox_2.setGeometry(QtCore.QRect(200, 310, 451, 361))
+        self.groupBox_2.setGeometry(QtCore.QRect(200, 310, 451, 421))
         self.groupBox_2.setObjectName("groupBox_2")
         self.connect_cookie = QtWidgets.QLabel(self.groupBox_2)
         self.connect_cookie.setGeometry(QtCore.QRect(80, 20, 91, 20))
         self.connect_cookie.setObjectName("connect_cookie")
         self.groupBox = QtWidgets.QGroupBox(self.groupBox_2)
-        self.groupBox.setGeometry(QtCore.QRect(30, 50, 391, 91))
+        self.groupBox.setGeometry(QtCore.QRect(30, 50, 391, 111))
         self.groupBox.setObjectName("groupBox")
         self.measure_s1_btn = QtWidgets.QPushButton(self.groupBox)
-        self.measure_s1_btn.setGeometry(QtCore.QRect(20, 20, 93, 28))
+        self.measure_s1_btn.setGeometry(QtCore.QRect(20, 50, 93, 28))
         self.measure_s1_btn.setObjectName("measure_s1_btn")
         self.done_s1_btn = QtWidgets.QPushButton(self.groupBox)
-        self.done_s1_btn.setGeometry(QtCore.QRect(150, 20, 51, 28))
+        self.done_s1_btn.setGeometry(QtCore.QRect(150, 50, 51, 28))
         self.done_s1_btn.setObjectName("done_s1_btn")
         self.measure_s1_lbl = QtWidgets.QLabel(self.groupBox)
-        self.measure_s1_lbl.setGeometry(QtCore.QRect(30, 55, 91, 21))
+        self.measure_s1_lbl.setGeometry(QtCore.QRect(30, 85, 91, 21))
         self.measure_s1_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.measure_s1_lbl.setObjectName("measure_s1_lbl")
         self.done_s1_lbl = QtWidgets.QLabel(self.groupBox)
-        self.done_s1_lbl.setGeometry(QtCore.QRect(170, 55, 61, 21))
+        self.done_s1_lbl.setGeometry(QtCore.QRect(170, 85, 61, 21))
         self.done_s1_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.done_s1_lbl.setObjectName("done_s1_lbl")
         self.warning_s1_lbl = QtWidgets.QLabel(self.groupBox)
-        self.warning_s1_lbl.setGeometry(QtCore.QRect(310, 21, 71, 20))
+        self.warning_s1_lbl.setGeometry(QtCore.QRect(310, 40, 71, 20))
         self.warning_s1_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.warning_s1_lbl.setObjectName("warning_s1_lbl")
         self.reset_s1_btn = QtWidgets.QPushButton(self.groupBox)
         self.reset_s1_btn.setEnabled(False)
-        self.reset_s1_btn.setGeometry(QtCore.QRect(200, 20, 51, 28))
+        self.reset_s1_btn.setGeometry(QtCore.QRect(200, 50, 51, 28))
         self.reset_s1_btn.setObjectName("reset_s1_btn")
         self.time_s1_lbl = QtWidgets.QLabel(self.groupBox)
-        self.time_s1_lbl.setGeometry(QtCore.QRect(310, 60, 71, 21))
+        self.time_s1_lbl.setGeometry(QtCore.QRect(310, 79, 71, 21))
         self.time_s1_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.time_s1_lbl.setObjectName("time_s1_lbl")
         self.time_s1_lbl_2 = QtWidgets.QLabel(self.groupBox)
-        self.time_s1_lbl_2.setGeometry(QtCore.QRect(260, 60, 51, 21))
+        self.time_s1_lbl_2.setGeometry(QtCore.QRect(260, 79, 51, 21))
         self.time_s1_lbl_2.setAlignment(QtCore.Qt.AlignCenter)
         self.time_s1_lbl_2.setObjectName("time_s1_lbl_2")
         self.time_s1_lbl_3 = QtWidgets.QLabel(self.groupBox)
-        self.time_s1_lbl_3.setGeometry(QtCore.QRect(260, 20, 51, 21))
+        self.time_s1_lbl_3.setGeometry(QtCore.QRect(260, 39, 51, 21))
         self.time_s1_lbl_3.setAlignment(QtCore.Qt.AlignCenter)
         self.time_s1_lbl_3.setObjectName("time_s1_lbl_3")
         self.time_s1_lbl_4 = QtWidgets.QLabel(self.groupBox)
-        self.time_s1_lbl_4.setGeometry(QtCore.QRect(260, 40, 51, 21))
+        self.time_s1_lbl_4.setGeometry(QtCore.QRect(260, 59, 51, 21))
         self.time_s1_lbl_4.setAlignment(QtCore.Qt.AlignCenter)
         self.time_s1_lbl_4.setObjectName("time_s1_lbl_4")
         self.error_s1_lbl = QtWidgets.QLabel(self.groupBox)
-        self.error_s1_lbl.setGeometry(QtCore.QRect(310, 40, 71, 20))
+        self.error_s1_lbl.setGeometry(QtCore.QRect(310, 59, 71, 20))
         self.error_s1_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.error_s1_lbl.setObjectName("error_s1_lbl")
+        self.measure_s1_lbl_2 = QtWidgets.QLabel(self.groupBox)
+        self.measure_s1_lbl_2.setGeometry(QtCore.QRect(100, 10, 101, 41))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.measure_s1_lbl_2.setFont(font)
+        self.measure_s1_lbl_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.measure_s1_lbl_2.setObjectName("measure_s1_lbl_2")
+        self.status_s1_lbl = QtWidgets.QLabel(self.groupBox)
+        self.status_s1_lbl.setGeometry(QtCore.QRect(190, 10, 91, 41))
+        self.status_s1_lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.status_s1_lbl.setObjectName("status_s1_lbl")
         self.connect_cookie_2 = QtWidgets.QLabel(self.groupBox_2)
         self.connect_cookie_2.setGeometry(QtCore.QRect(30, 20, 41, 20))
         self.connect_cookie_2.setObjectName("connect_cookie_2")
-        self.groupBox_5 = QtWidgets.QGroupBox(self.groupBox_2)
-        self.groupBox_5.setGeometry(QtCore.QRect(30, 150, 391, 91))
-        self.groupBox_5.setObjectName("groupBox_5")
-        self.measure_s2_btn = QtWidgets.QPushButton(self.groupBox_5)
-        self.measure_s2_btn.setGeometry(QtCore.QRect(20, 20, 93, 28))
+        self.groupBox_4 = QtWidgets.QGroupBox(self.groupBox_2)
+        self.groupBox_4.setGeometry(QtCore.QRect(30, 170, 391, 111))
+        self.groupBox_4.setObjectName("groupBox_4")
+        self.measure_s2_btn = QtWidgets.QPushButton(self.groupBox_4)
+        self.measure_s2_btn.setGeometry(QtCore.QRect(20, 50, 93, 28))
         self.measure_s2_btn.setObjectName("measure_s2_btn")
-        self.done_s2_btn = QtWidgets.QPushButton(self.groupBox_5)
-        self.done_s2_btn.setGeometry(QtCore.QRect(150, 20, 51, 28))
+        self.done_s2_btn = QtWidgets.QPushButton(self.groupBox_4)
+        self.done_s2_btn.setGeometry(QtCore.QRect(150, 50, 51, 28))
         self.done_s2_btn.setObjectName("done_s2_btn")
-        self.measure_s2_lbl = QtWidgets.QLabel(self.groupBox_5)
-        self.measure_s2_lbl.setGeometry(QtCore.QRect(30, 55, 91, 21))
+        self.measure_s2_lbl = QtWidgets.QLabel(self.groupBox_4)
+        self.measure_s2_lbl.setGeometry(QtCore.QRect(30, 85, 91, 21))
         self.measure_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.measure_s2_lbl.setObjectName("measure_s2_lbl")
-        self.done_s2_lbl = QtWidgets.QLabel(self.groupBox_5)
-        self.done_s2_lbl.setGeometry(QtCore.QRect(170, 56, 61, 20))
+        self.done_s2_lbl = QtWidgets.QLabel(self.groupBox_4)
+        self.done_s2_lbl.setGeometry(QtCore.QRect(170, 85, 61, 21))
         self.done_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.done_s2_lbl.setObjectName("done_s2_lbl")
-        self.reset_s2_btn = QtWidgets.QPushButton(self.groupBox_5)
-        self.reset_s2_btn.setEnabled(False)
-        self.reset_s2_btn.setGeometry(QtCore.QRect(200, 20, 51, 28))
-        self.reset_s2_btn.setObjectName("reset_s2_btn")
-        self.time_s1_lbl_5 = QtWidgets.QLabel(self.groupBox_5)
-        self.time_s1_lbl_5.setGeometry(QtCore.QRect(260, 40, 51, 21))
-        self.time_s1_lbl_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s1_lbl_5.setObjectName("time_s1_lbl_5")
-        self.time_s1_lbl_6 = QtWidgets.QLabel(self.groupBox_5)
-        self.time_s1_lbl_6.setGeometry(QtCore.QRect(260, 20, 51, 21))
-        self.time_s1_lbl_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s1_lbl_6.setObjectName("time_s1_lbl_6")
-        self.warning_s2_lbl = QtWidgets.QLabel(self.groupBox_5)
-        self.warning_s2_lbl.setGeometry(QtCore.QRect(310, 21, 71, 20))
+        self.warning_s2_lbl = QtWidgets.QLabel(self.groupBox_4)
+        self.warning_s2_lbl.setGeometry(QtCore.QRect(310, 40, 71, 20))
         self.warning_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.warning_s2_lbl.setObjectName("warning_s2_lbl")
-        self.error_s2_lbl = QtWidgets.QLabel(self.groupBox_5)
-        self.error_s2_lbl.setGeometry(QtCore.QRect(310, 40, 71, 20))
-        self.error_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
-        self.error_s2_lbl.setObjectName("error_s2_lbl")
-        self.time_s1_lbl_7 = QtWidgets.QLabel(self.groupBox_5)
-        self.time_s1_lbl_7.setGeometry(QtCore.QRect(260, 60, 51, 21))
-        self.time_s1_lbl_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s1_lbl_7.setObjectName("time_s1_lbl_7")
-        self.time_s2_lbl = QtWidgets.QLabel(self.groupBox_5)
-        self.time_s2_lbl.setGeometry(QtCore.QRect(310, 60, 71, 21))
+        self.reset_s2_btn = QtWidgets.QPushButton(self.groupBox_4)
+        self.reset_s2_btn.setEnabled(False)
+        self.reset_s2_btn.setGeometry(QtCore.QRect(200, 50, 51, 28))
+        self.reset_s2_btn.setObjectName("reset_s2_btn")
+        self.time_s2_lbl = QtWidgets.QLabel(self.groupBox_4)
+        self.time_s2_lbl.setGeometry(QtCore.QRect(310, 79, 71, 21))
         self.time_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.time_s2_lbl.setObjectName("time_s2_lbl")
-        self.groupBox_6 = QtWidgets.QGroupBox(self.groupBox_2)
-        self.groupBox_6.setGeometry(QtCore.QRect(30, 250, 391, 91))
-        self.groupBox_6.setObjectName("groupBox_6")
-        self.measure_s3_btn = QtWidgets.QPushButton(self.groupBox_6)
-        self.measure_s3_btn.setGeometry(QtCore.QRect(20, 20, 93, 28))
+        self.time_s1_lbl_12 = QtWidgets.QLabel(self.groupBox_4)
+        self.time_s1_lbl_12.setGeometry(QtCore.QRect(260, 79, 51, 21))
+        self.time_s1_lbl_12.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s1_lbl_12.setObjectName("time_s1_lbl_12")
+        self.time_s1_lbl_13 = QtWidgets.QLabel(self.groupBox_4)
+        self.time_s1_lbl_13.setGeometry(QtCore.QRect(260, 39, 51, 21))
+        self.time_s1_lbl_13.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s1_lbl_13.setObjectName("time_s1_lbl_13")
+        self.time_s1_lbl_14 = QtWidgets.QLabel(self.groupBox_4)
+        self.time_s1_lbl_14.setGeometry(QtCore.QRect(260, 59, 51, 21))
+        self.time_s1_lbl_14.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s1_lbl_14.setObjectName("time_s1_lbl_14")
+        self.error_s2_lbl = QtWidgets.QLabel(self.groupBox_4)
+        self.error_s2_lbl.setGeometry(QtCore.QRect(310, 59, 71, 20))
+        self.error_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.error_s2_lbl.setObjectName("error_s2_lbl")
+        self.status_s2_lbl = QtWidgets.QLabel(self.groupBox_4)
+        self.status_s2_lbl.setGeometry(QtCore.QRect(190, 10, 91, 41))
+        self.status_s2_lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.status_s2_lbl.setObjectName("status_s2_lbl")
+        self.measure_s1_lbl_4 = QtWidgets.QLabel(self.groupBox_4)
+        self.measure_s1_lbl_4.setGeometry(QtCore.QRect(100, 10, 101, 41))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.measure_s1_lbl_4.setFont(font)
+        self.measure_s1_lbl_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.measure_s1_lbl_4.setObjectName("measure_s1_lbl_4")
+        self.groupBox_5 = QtWidgets.QGroupBox(self.groupBox_2)
+        self.groupBox_5.setGeometry(QtCore.QRect(30, 290, 391, 111))
+        self.groupBox_5.setObjectName("groupBox_5")
+        self.measure_s3_btn = QtWidgets.QPushButton(self.groupBox_5)
+        self.measure_s3_btn.setGeometry(QtCore.QRect(20, 50, 93, 28))
         self.measure_s3_btn.setObjectName("measure_s3_btn")
-        self.done_s3_btn = QtWidgets.QPushButton(self.groupBox_6)
-        self.done_s3_btn.setGeometry(QtCore.QRect(150, 20, 51, 28))
+        self.done_s3_btn = QtWidgets.QPushButton(self.groupBox_5)
+        self.done_s3_btn.setGeometry(QtCore.QRect(150, 50, 51, 28))
         self.done_s3_btn.setObjectName("done_s3_btn")
-        self.measure_s3_lbl = QtWidgets.QLabel(self.groupBox_6)
-        self.measure_s3_lbl.setGeometry(QtCore.QRect(30, 55, 91, 21))
+        self.measure_s3_lbl = QtWidgets.QLabel(self.groupBox_5)
+        self.measure_s3_lbl.setGeometry(QtCore.QRect(30, 85, 91, 21))
         self.measure_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.measure_s3_lbl.setObjectName("measure_s3_lbl")
-        self.done_s3_lbl = QtWidgets.QLabel(self.groupBox_6)
-        self.done_s3_lbl.setGeometry(QtCore.QRect(170, 56, 61, 20))
+        self.done_s3_lbl = QtWidgets.QLabel(self.groupBox_5)
+        self.done_s3_lbl.setGeometry(QtCore.QRect(170, 85, 61, 21))
         self.done_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.done_s3_lbl.setObjectName("done_s3_lbl")
-        self.reset_s3_btn = QtWidgets.QPushButton(self.groupBox_6)
-        self.reset_s3_btn.setEnabled(False)
-        self.reset_s3_btn.setGeometry(QtCore.QRect(200, 20, 51, 28))
-        self.reset_s3_btn.setObjectName("reset_s3_btn")
-        self.time_s3_lbl = QtWidgets.QLabel(self.groupBox_6)
-        self.time_s3_lbl.setGeometry(QtCore.QRect(310, 60, 71, 21))
-        self.time_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s3_lbl.setObjectName("time_s3_lbl")
-        self.time_s1_lbl_10 = QtWidgets.QLabel(self.groupBox_6)
-        self.time_s1_lbl_10.setGeometry(QtCore.QRect(260, 60, 51, 21))
-        self.time_s1_lbl_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s1_lbl_10.setObjectName("time_s1_lbl_10")
-        self.warning_s3_lbl = QtWidgets.QLabel(self.groupBox_6)
-        self.warning_s3_lbl.setGeometry(QtCore.QRect(310, 21, 71, 20))
+        self.warning_s3_lbl = QtWidgets.QLabel(self.groupBox_5)
+        self.warning_s3_lbl.setGeometry(QtCore.QRect(310, 40, 71, 20))
         self.warning_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.warning_s3_lbl.setObjectName("warning_s3_lbl")
-        self.error_s3_lbl = QtWidgets.QLabel(self.groupBox_6)
-        self.error_s3_lbl.setGeometry(QtCore.QRect(310, 40, 71, 20))
+        self.reset_s3_btn = QtWidgets.QPushButton(self.groupBox_5)
+        self.reset_s3_btn.setEnabled(False)
+        self.reset_s3_btn.setGeometry(QtCore.QRect(200, 50, 51, 28))
+        self.reset_s3_btn.setObjectName("reset_s3_btn")
+        self.time_s3_lbl = QtWidgets.QLabel(self.groupBox_5)
+        self.time_s3_lbl.setGeometry(QtCore.QRect(310, 79, 71, 21))
+        self.time_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s3_lbl.setObjectName("time_s3_lbl")
+        self.time_s1_lbl_20 = QtWidgets.QLabel(self.groupBox_5)
+        self.time_s1_lbl_20.setGeometry(QtCore.QRect(260, 79, 51, 21))
+        self.time_s1_lbl_20.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s1_lbl_20.setObjectName("time_s1_lbl_20")
+        self.time_s1_lbl_21 = QtWidgets.QLabel(self.groupBox_5)
+        self.time_s1_lbl_21.setGeometry(QtCore.QRect(260, 39, 51, 21))
+        self.time_s1_lbl_21.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s1_lbl_21.setObjectName("time_s1_lbl_21")
+        self.time_s1_lbl_22 = QtWidgets.QLabel(self.groupBox_5)
+        self.time_s1_lbl_22.setGeometry(QtCore.QRect(260, 59, 51, 21))
+        self.time_s1_lbl_22.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_s1_lbl_22.setObjectName("time_s1_lbl_22")
+        self.error_s3_lbl = QtWidgets.QLabel(self.groupBox_5)
+        self.error_s3_lbl.setGeometry(QtCore.QRect(310, 59, 71, 20))
         self.error_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.error_s3_lbl.setObjectName("error_s3_lbl")
-        self.time_s1_lbl_9 = QtWidgets.QLabel(self.groupBox_6)
-        self.time_s1_lbl_9.setGeometry(QtCore.QRect(260, 20, 51, 21))
-        self.time_s1_lbl_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s1_lbl_9.setObjectName("time_s1_lbl_9")
-        self.time_s1_lbl_8 = QtWidgets.QLabel(self.groupBox_6)
-        self.time_s1_lbl_8.setGeometry(QtCore.QRect(260, 40, 51, 21))
-        self.time_s1_lbl_8.setAlignment(QtCore.Qt.AlignCenter)
-        self.time_s1_lbl_8.setObjectName("time_s1_lbl_8")
+        self.status_s3_lbl = QtWidgets.QLabel(self.groupBox_5)
+        self.status_s3_lbl.setGeometry(QtCore.QRect(190, 10, 91, 41))
+        self.status_s3_lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.status_s3_lbl.setObjectName("status_s3_lbl")
+        self.measure_s1_lbl_5 = QtWidgets.QLabel(self.groupBox_5)
+        self.measure_s1_lbl_5.setGeometry(QtCore.QRect(100, 10, 101, 41))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.measure_s1_lbl_5.setFont(font)
+        self.measure_s1_lbl_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.measure_s1_lbl_5.setObjectName("measure_s1_lbl_5")
         self.groupBox_3 = QtWidgets.QGroupBox(Form)
         self.groupBox_3.setGeometry(QtCore.QRect(200, 220, 451, 81))
         font = QtGui.QFont()
@@ -233,31 +269,37 @@ class Ui_Form(object):
         self.time_s1_lbl_3.setText(_translate("Form", "Warning:"))
         self.time_s1_lbl_4.setText(_translate("Form", "Error:"))
         self.error_s1_lbl.setText(_translate("Form", "OK"))
+        self.measure_s1_lbl_2.setText(_translate("Form", "SENSOR STATUS:"))
+        self.status_s1_lbl.setText(_translate("Form", "Unitialized"))
         self.connect_cookie_2.setText(_translate("Form", "Cookie:"))
-        self.groupBox_5.setTitle(_translate("Form", "PDU"))
+        self.groupBox_4.setTitle(_translate("Form", "PDU"))
         self.measure_s2_btn.setText(_translate("Form", "Measuring"))
         self.done_s2_btn.setText(_translate("Form", "Stop"))
         self.measure_s2_lbl.setText(_translate("Form", "Idle"))
         self.done_s2_lbl.setText(_translate("Form", "Idle"))
-        self.reset_s2_btn.setText(_translate("Form", "Reset"))
-        self.time_s1_lbl_5.setText(_translate("Form", "Error:"))
-        self.time_s1_lbl_6.setText(_translate("Form", "Warning:"))
         self.warning_s2_lbl.setText(_translate("Form", "OK"))
-        self.error_s2_lbl.setText(_translate("Form", "OK"))
-        self.time_s1_lbl_7.setText(_translate("Form", "Time:"))
+        self.reset_s2_btn.setText(_translate("Form", "Reset"))
         self.time_s2_lbl.setText(_translate("Form", "0"))
-        self.groupBox_6.setTitle(_translate("Form", "ADU"))
+        self.time_s1_lbl_12.setText(_translate("Form", "Time:"))
+        self.time_s1_lbl_13.setText(_translate("Form", "Warning:"))
+        self.time_s1_lbl_14.setText(_translate("Form", "Error:"))
+        self.error_s2_lbl.setText(_translate("Form", "OK"))
+        self.status_s2_lbl.setText(_translate("Form", "Unitialized"))
+        self.measure_s1_lbl_4.setText(_translate("Form", "SENSOR STATUS:"))
+        self.groupBox_5.setTitle(_translate("Form", "ADU"))
         self.measure_s3_btn.setText(_translate("Form", "Measuring"))
         self.done_s3_btn.setText(_translate("Form", "Stop"))
         self.measure_s3_lbl.setText(_translate("Form", "Idle"))
         self.done_s3_lbl.setText(_translate("Form", "Idle"))
+        self.warning_s3_lbl.setText(_translate("Form", "OK"))
         self.reset_s3_btn.setText(_translate("Form", "Reset"))
         self.time_s3_lbl.setText(_translate("Form", "0"))
-        self.time_s1_lbl_10.setText(_translate("Form", "Time:"))
-        self.warning_s3_lbl.setText(_translate("Form", "OK"))
+        self.time_s1_lbl_20.setText(_translate("Form", "Time:"))
+        self.time_s1_lbl_21.setText(_translate("Form", "Warning:"))
+        self.time_s1_lbl_22.setText(_translate("Form", "Error:"))
         self.error_s3_lbl.setText(_translate("Form", "OK"))
-        self.time_s1_lbl_9.setText(_translate("Form", "Warning:"))
-        self.time_s1_lbl_8.setText(_translate("Form", "Error:"))
+        self.status_s3_lbl.setText(_translate("Form", "Unitialized"))
+        self.measure_s1_lbl_5.setText(_translate("Form", "SENSOR STATUS:"))
         self.groupBox_3.setTitle(_translate("Form", "Server"))
         self.connect_server.setText(_translate("Form", "Server Not Connected"))
         self.ip_btn.setText(_translate("Form", "Update IP"))
@@ -287,8 +329,10 @@ class Ui_Form(object):
                 if self.regs_old[i] != regs[i]:
                     self.regs_old[i]= regs[i]
                     if i<3:
-                        self.mask1[i]=self.regs_old[i]//10
-                        self.mask2[i]=self.regs_old[i]%10
+                        self.mask1_1[i]=self.regs_old[i]//256
+                        self.mask2_1[i]=self.regs_old[i]%256
+                        self.mask1_2[i]=self.mask2_1[i]//10
+                        self.mask2_2[i]=self.mask2_1[i]%10
                     elif i>=3 and i<6:
                         self.mask1[i]=self.regs_old[i]//256
                         self.mask2[i]=self.regs_old[i]%256
@@ -296,132 +340,136 @@ class Ui_Form(object):
                 #Check the values of sensor 1
                 if i == 0:
                     
-                    if self.mask2[i] == 0:
+                    if self.mask2_2[i] == 0:
                         self.measure_s1_lbl.setText("Idle")
                         
-                    elif self.mask2[i] == 1:
+                    elif self.mask2_2[i] == 1:
                         self.measure_s1_lbl.setText("Connecting")
                         
-                    elif self.mask2[i] == 2:
+                    elif self.mask2_2[i] == 2:
                         self.measure_s1_lbl.setText("Connected")
 
-                    elif self.mask2[i] == 3:
+                    elif self.mask2_2[i] == 3:
                         self.measure_s1_lbl.setText("Measuring")
 
-                    elif self.mask2[i] == 4:
+                    elif self.mask2_2[i] == 4:
                         self.measure_s1_lbl.setText("Measured")
-                        self.mask2[i]=0
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask2_2[i]=0
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         c.write_single_register(i,writemask)
 
-                    elif self.mask2[i] == 7:
+                    elif self.mask2_2[i] == 7:
                         self.error_s1_lbl.setText("error 7")
-                        self.mask1[i]=1
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask1_2[i]=1
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         print(writemask)
                         c.write_single_register(i,writemask)
                         self.done_s1_btn.setEnabled(True)
 
-                    if self.mask1[i] == 0:
+                    if self.mask1_2[i] == 0:
                         self.done_s1_lbl.setText("Idle")
                         
-                    elif self.mask1[i] == 1:
+                    elif self.mask1_2[i] == 1:
                         self.done_s1_lbl.setText("Connecting")
 
-                    elif self.mask1[i] == 2:
+                    elif self.mask1_2[i] == 2:
                         self.done_s1_lbl.setText("Stopping")
                         
-                    elif self.mask1[i] == 3:
+                    elif self.mask1_2[i] == 3:
                         self.done_s1_lbl.setText("Stopped")
-                        self.mask1[i]=0
-                        self.mask2[i]=0
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask1_2[i]=0
+                        self.mask2_2[i]=0
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         c.write_single_register(i,writemask)
                         self.done_s1_btn.setEnabled(True)
                         self.reset_s1_btn.setEnabled(False)
 
-                    elif self.mask1[i] == 7:
+                    elif self.mask1_2[i] == 7:
                         self.done_s1_lbl.setText("Can't Stop")
-                        self.mask1[i]=1
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask1_2[i]=1
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         print(writemask)
                         c.write_single_register(i,writemask)
+
+                    if self.mask1[i] != 0:
+                        status=seek_table(self.mask1[i])
+                        self.status_s1_lbl.setText(status)
                     
                 #Check the values of sensor 2        
                 elif i == 1:
-                    if self.mask2[i] == 0:
+                    if self.mask2_2[i] == 0:
                         self.measure_s2_lbl.setText("Idle")
                         
-                    elif self.mask2[i] == 1:
+                    elif self.mask2_2[i] == 1:
                         self.error_s2_lbl.setText("CDU Not Connected")
                         
-                    elif self.mask2[i] == 2:
+                    elif self.mask2_2[i] == 2:
                         self.measure_s2_lbl.setText("Measuring")
 
-                    elif self.mask2[i] == 3:
+                    elif self.mask2_2[i] == 3:
                         self.measure_s2_lbl.setText("Measured")
-                        self.mask2[i]=0
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask2_2[i]=0
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         c.write_single_register(i,writemask)
 
-                    elif self.mask2[i] == 7:
+                    elif self.mask2_2[i] == 7:
                         self.error_s2_lbl.setText("No Water")
                         self.done_s1_btn.setEnabled(True)
 
-                    if self.mask1[i] == 0:
+                    if self.mask1_2[i] == 0:
                         self.done_s2_lbl.setText("Idle")
                         
-                    elif self.mask1[i] == 1:
+                    elif self.mask1_2[i] == 1:
                         self.done_s2_lbl.setText("Connecting")
 
-                    elif self.mask1[i] == 2:
+                    elif self.mask1_2[i] == 2:
                         self.done_s2_lbl.setText("Stopping")
                         
-                    elif self.mask1[i] == 3:
+                    elif self.mask1_2[i] == 3:
                         self.done_s2_lbl.setText("Stopped")
-                        self.mask1[i]=0
-                        self.mask2[i]=0
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask1_2[i]=0
+                        self.mask2_2[i]=0
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         c.write_single_register(i,writemask)
-                    elif self.mask1[i] == 7:
+                    elif self.mask1_2[i] == 7:
                         self.done_s2_lbl.setText("Can't Stop")
                 
                 #Check the values of sensor 3        
                 elif i == 2:
-                    if self.mask2[i] == 0:
+                    if self.mask2_2[i] == 0:
                         self.measure_s3_lbl.setText("Idle")
                         
-                    elif self.mask2[i] == 1:
+                    elif self.mask2_2[i] == 1:
                         self.measure_s3_lbl.setText("Connecting")
                         
-                    elif self.mask2[i] == 2:
+                    elif self.mask2_2[i] == 2:
                         self.measure_s3_lbl.setText("Measuring")
 
-                    elif self.mask2[i] == 3:
+                    elif self.mask2_2[i] == 3:
                         self.measure_s3_lbl.setText("Measured")
-                        self.mask2[i]=0
-                        writemask=mask1*10+self.mask2[i]
+                        self.mask2_2[i]=0
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         c.write_single_register(i,writemask)
 
-                    elif self.mask2[i] == 7:
+                    elif self.mask2_2[i] == 7:
                         self.measure_s3_lbl.setText("No Water")
                         self.done_s1_btn.setEnabled(True)
 
-                    if self.mask1[i] == 0:
+                    if self.mask1_2[i] == 0:
                         self.done_s3_lbl.setText("Idle")
                         
-                    elif self.mask1[i] == 1:
+                    elif self.mask1_2[i] == 1:
                         self.done_s3_lbl.setText("Connecting")
 
-                    elif self.mask1[i] == 2:
+                    elif self.mask1_2[i] == 2:
                         self.done_s3_lbl.setText("Stopping")
                         
-                    elif self.mask1[i] == 3:
+                    elif self.mask1_2[i] == 3:
                         self.done_s3_lbl.setText("Stopped")
-                        self.mask1[i]=0
-                        writemask=self.mask1[i]*10+self.mask2[i]
+                        self.mask1_2[i]=0
+                        writemask=self.mask1_1[i]*256+self.mask1_2[i]*10+self.mask2_2[i]
                         c.write_single_register(i,writemask)
-                    elif self.mask1[i] == 7:
+                    elif self.mask1_2[i] == 7:
                         self.done_s3_lbl.setText("Can't Stop")
 
                 
@@ -433,9 +481,11 @@ class Ui_Form(object):
                         self.warning_s1_lbl.setText(str(self.mask1[i]))
 
                     if self.mask2[i] == 0:
-                        self.error_s1_lbl.setText("OK")  
+                        self.error_s1_lbl.setText("OK") 
+                        self.reset_s1_btn.setEnabled(False) 
                     elif self.mask2[i] > 0:
                         self.error_s1_lbl.setText(str(self.mask2[i]))
+                        self.reset_s1_btn.setEnabled(True)
 
                 elif i == 4:
                     if self.mask1[i] == 0:
@@ -446,8 +496,10 @@ class Ui_Form(object):
 
                     if self.mask2[i] == 0:
                         self.error_s2_lbl.setText("OK")  
+                        self.reset_s2_btn.setEnabled(False)
                     elif self.mask2[i] > 0:
                         self.error_s2_lbl.setText(str(self.mask2[i]))
+                        self.reset_s2_btn.setEnabled(True)
 
                 elif i == 5:
                     if self.mask1[i] == 0:
@@ -457,9 +509,11 @@ class Ui_Form(object):
                         self.warning_s3_lbl.setText(str(self.mask1[i]))
 
                     if self.mask2[i] == 0:
-                        self.error_s3_lbl.setText("OK")  
+                        self.error_s3_lbl.setText("OK") 
+                        self.reset_s3_btn.setEnabled(False) 
                     elif self.mask2[i] > 0:
                         self.error_s3_lbl.setText(str(self.mask2[i]))
+                        self.reset_s3_btn.setEnabled(True)
 
 
                 elif i == 6:
@@ -514,6 +568,35 @@ class Ui_Form(object):
             print("Not Connected")
 
     #Measuring button function
+    def seek_table(data):
+        if data==1:
+            a="Initializing"
+        elif data==2:
+            a="Init_failed"
+        elif data==3:
+            a="Uninitialized"
+        elif data==4:
+            a="Wait_trigger"
+        elif data==5:
+            a="Initialized"
+        elif data==6:
+            a="Paused"
+        elif data==7:
+            a="Running"
+        elif data==8:
+            a="Init_failed"
+        elif data==9:
+            a="Stopped"
+        elif data==10:
+            a="Completed"
+        elif data==11:
+            a="Idle"
+        elif data==12:
+            a="Finalizing"
+
+        return a
+
+
     def measureS1(self):
         print("Measuring!")
         c.open()
@@ -561,10 +644,15 @@ class Ui_Form(object):
         regs = c.read_holding_registers(0, 10)
         if c.is_open() == 1:
             self.done_s1_lbl.setText("Reseting!")
-            self.mask1[0]=0
-            self.mask1[0]=0
-            writemask=self.mask1[0]*10+self.mask2[0]
-            print(writemask)
+
+            self.mask2[3]=0
+            writemask=self.mask1[3]*256+self.mask2[3]
+            c.write_single_register(3,writemask)
+            self.mask1_1[0]=0
+            self.mask1_2[0]=0
+            self.mask2_2[0]=0
+            writemask=self.mask1_1[0]*256+self.mask1_2[0]*10+self.mask2_2[0]
+            
             if c.write_single_register(0,writemask):
                 regs = c.read_holding_registers(0, 10)
             if regs:
@@ -593,6 +681,8 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
+
+
 
 
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>837</width>
-    <height>706</height>
+    <height>746</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,7 +53,7 @@ QGroupBox::title {
      <x>200</x>
      <y>310</y>
      <width>451</width>
-     <height>361</height>
+     <height>421</height>
     </rect>
    </property>
    <property name="title">
@@ -78,7 +78,7 @@ QGroupBox::title {
       <x>30</x>
       <y>50</y>
       <width>391</width>
-      <height>91</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="title">
@@ -88,7 +88,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>50</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -101,7 +101,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>20</y>
+       <y>50</y>
        <width>51</width>
        <height>28</height>
       </rect>
@@ -114,7 +114,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>55</y>
+       <y>85</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -130,7 +130,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>55</y>
+       <y>85</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -146,7 +146,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>21</y>
+       <y>40</y>
        <width>71</width>
        <height>20</height>
       </rect>
@@ -165,7 +165,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>20</y>
+       <y>50</y>
        <width>51</width>
        <height>28</height>
       </rect>
@@ -178,7 +178,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>60</y>
+       <y>79</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -194,7 +194,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>60</y>
+       <y>79</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -210,7 +210,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>20</y>
+       <y>39</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -226,7 +226,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>40</y>
+       <y>59</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -242,13 +242,51 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>40</y>
+       <y>59</y>
        <width>71</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>OK</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="measure_s1_lbl_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SENSOR STATUS:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_s1_lbl">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unitialized</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -268,13 +306,13 @@ QGroupBox::title {
      <string>Cookie:</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox_5">
+   <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>150</y>
+      <y>170</y>
       <width>391</width>
-      <height>91</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="title">
@@ -284,7 +322,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>50</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -297,7 +335,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>20</y>
+       <y>50</y>
        <width>51</width>
        <height>28</height>
       </rect>
@@ -310,7 +348,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>55</y>
+       <y>85</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -326,13 +364,29 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>56</y>
+       <y>85</y>
        <width>61</width>
-       <height>20</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
       <string>Idle</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="warning_s2_lbl">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>40</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OK</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -345,7 +399,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>20</y>
+       <y>50</y>
        <width>51</width>
        <height>28</height>
       </rect>
@@ -354,91 +408,11 @@ QGroupBox::title {
       <string>Reset</string>
      </property>
     </widget>
-    <widget class="QLabel" name="time_s1_lbl_5">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>40</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Error:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="time_s1_lbl_6">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>20</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Warning:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="warning_s2_lbl">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>21</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>OK</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="error_s2_lbl">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>40</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>OK</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="time_s1_lbl_7">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>60</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Time:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QLabel" name="time_s2_lbl">
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>60</y>
+       <y>79</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -450,14 +424,116 @@ QGroupBox::title {
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QLabel" name="time_s1_lbl_12">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>79</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Time:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="time_s1_lbl_13">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>39</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Warning:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="time_s1_lbl_14">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>59</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Error:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="error_s2_lbl">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>59</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_s2_lbl">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unitialized</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="measure_s1_lbl_4">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SENSOR STATUS:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_6">
+   <widget class="QGroupBox" name="groupBox_5">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>250</y>
+      <y>290</y>
       <width>391</width>
-      <height>91</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="title">
@@ -467,7 +543,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>50</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -480,7 +556,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>20</y>
+       <y>50</y>
        <width>51</width>
        <height>28</height>
       </rect>
@@ -493,7 +569,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>55</y>
+       <y>85</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -509,13 +585,29 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>56</y>
+       <y>85</y>
        <width>61</width>
-       <height>20</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
       <string>Idle</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="warning_s3_lbl">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>40</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OK</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -528,7 +620,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>20</y>
+       <y>50</y>
        <width>51</width>
        <height>28</height>
       </rect>
@@ -541,7 +633,7 @@ QGroupBox::title {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>60</y>
+       <y>79</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -553,11 +645,11 @@ QGroupBox::title {
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="time_s1_lbl_10">
+    <widget class="QLabel" name="time_s1_lbl_20">
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>60</y>
+       <y>79</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -569,43 +661,11 @@ QGroupBox::title {
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="warning_s3_lbl">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>21</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>OK</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="error_s3_lbl">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>40</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>OK</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="time_s1_lbl_9">
+    <widget class="QLabel" name="time_s1_lbl_21">
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>20</y>
+       <y>39</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -617,17 +677,71 @@ QGroupBox::title {
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="time_s1_lbl_8">
+    <widget class="QLabel" name="time_s1_lbl_22">
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>40</y>
+       <y>59</y>
        <width>51</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
       <string>Error:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="error_s3_lbl">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>59</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_s3_lbl">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unitialized</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="measure_s1_lbl_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SENSOR STATUS:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
