@@ -392,6 +392,7 @@ class Ui_Form(object):
                         c.write_single_register(i,writemask)
 
                     if self.mask1[i] != 0:
+                        #Status update
                         status=seek_table(self.mask1[i])
                         self.status_s1_lbl.setText(status)
                     
